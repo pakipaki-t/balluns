@@ -1,0 +1,41 @@
+.footer
+    background-color:#333333
+    height: 38rem
+    padding: 8rem
+    @include respont(tab-part)
+        padding: 3rem
+    
+
+    &__logo
+        width: 12rem
+        @include respont(tab-part)
+            margin-bottom: 2rem
+    &__list
+        list-style: none
+        text-align: center
+    &__item
+        display: inline-block
+        &:not(:last-child)
+            margin-right: 5rem
+        @include respont(tab-part)
+            margin-right: 0rem !important
+            padding: 2rem
+        // @include respont(tab-part)
+        //     line-height: 3rem
+    &__link
+        &:link, &:visited
+            display: inline-block
+            font-size: $font-size-paragraf
+            letter-spacing: .2rem
+            color:$color-grey
+            text-decoration: none
+            text-transform: uppercase
+            transition: all .3s
+            
+        
+        &:hover
+            transform: rotate(5deg) scale(1.2)
+            color: $color-brown-light
+            text-shadow: $shadow-h2
+   
+       

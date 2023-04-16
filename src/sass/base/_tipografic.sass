@@ -1,0 +1,105 @@
+body
+    font-family: "Roboto", sans-serif
+    font-weight: 400
+    // color: #dc1919
+    font-size: $font-size-paragraf
+    letter-spacing: 0.2rem
+    
+.title-first
+    color: $color-white
+    &__main
+        display: block
+        font-weight: 800
+        font-size: 5rem
+        line-height: 6rem
+        letter-spacing: 1rem
+        text-transform: uppercase
+        margin-bottom: 1rem
+        animation-name: leftright
+        animation-duration: 4s
+        animation-delay: 1s
+        animation-timing-function: ease
+        backface-visibility: hidden
+        @include respont(tab-lend)
+            font-size: 4rem
+        @include respont(tab-part)
+            font-size: 3.6rem
+            letter-spacing: .5rem
+            margin-bottom: 0
+
+
+    &__secondary
+        display: block
+        font-style: normal
+        font-weight: 100
+        font-size: 4rem
+        line-height: 4.8rem
+        letter-spacing: 0.5rem
+        animation-name: rightleft 
+        animation-duration: 4s
+        animation-delay: 1s
+        animation-timing-function: ease
+        backface-visibility: hidden
+        margin-bottom: 6.5rem
+        @include respont(tab-lend)
+            font-size: 3.5rem
+            margin-bottom: 3.5rem
+        @include respont(tab-part)
+            font-size: 3.2rem
+            letter-spacing: .2rem
+        
+
+
+.title-secondary
+    text-align: center
+    display: inline-block
+    font-weight: 800
+    font-size: $font-size-h2
+    letter-spacing: 1rem
+    text-transform: uppercase
+    transition: all .4
+    backface-visibility: hidden
+    background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    @include respont(tab-lend)
+        font-size: 3rem
+        letter-spacing: .6rem
+
+    
+    &_white
+        background: none
+        -webkit-text-fill-color: $color-white
+        text-shadow: $shadow-h2
+        
+
+    &:hover
+        transform: skewY(2deg) skewX(15deg) scale(1.1)
+        text-shadow: $shadow-h2
+// .title-secondary_white
+//     position: relative
+//     background: none
+    
+//     color: $color-white
+//     z-index: 2
+
+        
+
+.title-third
+    font-weight: 700
+    font-size: $font-size-h3
+    letter-spacing: .2rem
+    text-transform: uppercase
+    @include respont(tab-lend)
+        font-size: 1.8rem
+    @include respont(tab-part)
+        text-align: center
+.paragraf
+    font-style: normal
+    font-weight: 400
+    font-size: $font-size-paragraf
+    line-height: 140%
+    letter-spacing: .2rem
+    @include respont(tab-lend)
+        font-size: 1.5rem
+

@@ -1,0 +1,109 @@
+.form-block
+    height: 50rem
+    background: linear-gradient(110deg, rgba(255,255,255,.8) 0%, rgba(249,250,255,1) 56%, rgba(208,186,152,0.2) 56%, rgba(173,135,12,0.2) 100%), url(../img/form-img.jpg)
+    box-shadow: $box-shadow
+    border-radius: .5rem
+    overflow: hidden
+    @include respont(tab-part)
+        background: linear-gradient(110deg, rgba(255,255,255,.8) 0%, rgba(249,250,255,1) 560%, rgba(208,186,152,0.2) 56%, rgba(173,135,12,0.2) 100%), url(../img/form-img.jpg)
+.form
+    width: 70%
+    padding-top: 5rem
+    padding-left: 5rem
+    @include respont(tab-part)
+        width: 100%
+        padding-top: 3rem
+        padding-left: 3rem
+    &__title
+        margin-bottom: 3rem
+    &__group:not(:last-child)
+        margin-bottom: 2rem
+    
+            
+    // &__group:nth-child(4)
+    //     margin-bottom: 4rem
+    &__lebel
+        font-size: $font-size-paragraf
+        letter-spacing: .2rem
+        font-weight: 400
+        color: $color-black
+        display: block
+        margin-top: 1rem
+        margin-left: 1.5rem
+        transition: .2s all
+    &__radio
+        display: none
+        
+
+
+    &__input
+        font-size: $font-size-paragraf
+        letter-spacing: .2rem
+        font-weight: 400
+        color: $color-black
+        padding: 2rem 0rem 2rem 2rem
+        background: $color-white
+        border: none
+        border-bottom: .3rem solid transparent
+        border-radius: .5rem
+        width: 50%
+        @include respont(tab-part)
+            width: 90%
+            box-shadow: $box-shadow
+        &:focus
+            outline: none
+            border-bottom: .3rem solid #66D763
+            color: $color-brown-light
+            box-shadow: $box-shadow
+        &:focus:invalid
+            borerder-bottom: .3rem solid #D76363
+    &__input:placeholder-shown + &__lebel
+        opacity: 0
+        visibility: none
+        transform: translateY(-2rem)
+    &__group_radio
+        display: inline
+        margin-bottom: 2rem
+        &:not(:last-child)
+            margin-right: 2rem
+        @include respont(tab-lend)
+            display: block
+            
+    &__lebel-radio
+        cursor: pointer 
+        position: relative
+        padding-left: 4rem
+        
+        
+        
+              
+    &__bottom-lable
+        width: 3rem
+        height: 3rem
+        border-radius: 50%
+        border: .5rem solid $color-brown-dark
+        display: block
+        position: absolute
+        top: -1rem
+        left: 0
+        
+    
+        &::after
+            content: ""
+            display: block
+            width: 1rem
+            height: 1rem
+            border-radius: 50%
+            background: $color-brown-dark
+            position: absolute
+            top:50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: .2s
+    // &__group_radio:checked ~ &__lebel-radio &__bottom-lable::after
+    //     opacity: 1
+    &__radio:checked ~ &__lebel-radio &__bottom-lable::after
+        opacity: 1
+            
+

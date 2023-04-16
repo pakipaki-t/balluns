@@ -1,0 +1,26 @@
+@mixin btn-style
+    text-decoration: none
+    text-transform: uppercase
+    display: inline-block
+    color: $color-grey
+
+@mixin clearfix
+    &::after
+        content: ""
+        display: table
+        clear: both
+
+@mixin respont ($breakpoint)
+    @if $breakpoint ==  phone
+        @media only screen and (max-width: 600px)
+            @content
+    @if $breakpoint ==  tab-part
+        @media only screen and (max-width: 900px)
+            @content        
+    @if $breakpoint ==  tab-lend 
+        @media only screen and (max-width: 1240px)
+            @content
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content
+ 
